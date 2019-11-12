@@ -27,5 +27,6 @@ $ docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver
 # 修改镜像tag
 $ docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:v1.13.0  k8s.gcr.io/kube-apiserver:v1.13.0
 
-
-
+# 通过阿里云构建
+  FROM k8s.gcr.io/kube-proxy-amd64:v1.11.1
+  FROM k8s.gcr.io/coredns:1.6.2
