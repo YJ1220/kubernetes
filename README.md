@@ -15,29 +15,30 @@
 
 ## 例如拉取kube-apiserver-amd64:v1.13.2镜像使用如下格式即可：
 * google镜像默认格式: k8s.gcr.io/kube-apiserver:v1.13.2
-* dockerhub拉取镜像: 
-''' 
+* dockerhub拉取镜像:
+```
     $ docker pull mirrorgooglecontainers/kube-apiserver-amd64:v1.13.2
-'''
+```
 * 修改tag
-'''
+```
     $ docker tag mirrorgooglecontainers/kube-apiserver-amd64:v1.13.2 k8s.gcr.io/kube-apiserver-amd64:v1.13.2
-'''
+```
 * 成功拉取的镜像
-'''
-    $ docker images | grep kube-apiservermirrorgooglecontainers/kube-apiserver-amd64   v1.13.2             177db4b8e93a        2 months ago        181MBk8s.gcr.io/kube-apiserver-amd64               v1.13.2             177db4b8e93a        2 months ago        181MB
-'''
+```
+    $ docker images | grep kube-apiserver
+    mirrorgooglecontainers/kube-apiserver-amd64   v1.13.2             177db4b8e93a        2 months ago        181MBk8s.gcr.io/kube-apiserver-amd64               v1.13.2             177db4b8e93a        2 months ago        181MB
+```
 
 ## 从阿里云镜像仓库搜索并拉取
 
 * 从阿里云镜像仓库拉取镜像
-'''
+```
     $ docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:v1.13.0
-'''
+```
 * 修改镜像tag
-'''
+```
     $ docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:v1.13.0  k8s.gcr.io/kube-apiserver:v1.13.0
-'''
+```
 ## 通过阿里云构建
-  FROM k8s.gcr.io/kube-proxy-amd64:v1.11.1
-  FROM k8s.gcr.io/coredns:1.6.2
+`FROM k8s.gcr.io/kube-proxy-amd64:v1.11.1`  
+`FROM k8s.gcr.io/coredns:1.6.2`
