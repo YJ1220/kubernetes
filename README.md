@@ -1,10 +1,13 @@
 # kubernetes
 
-dockerfile国内可访问的镜像仓库Docker Hub镜像仓库https://hub.docker.com/
+dockerfile国内可访问的镜像仓库
+Docker Hub镜像仓库: https://hub.docker.com/
 阿里云镜像仓库：https://cr.console.aliyun.com
 RedHat镜像仓库：https://access.redhat.com/containers
 
-国内无法访问的镜像仓库google镜像仓库：https://console.cloud.google.com/gcr/images/google-containers/GLOBALcoreos镜像仓库：https://quay.io/repository/
+国内无法访问的镜像仓库
+google镜像仓库：https://console.cloud.google.com/gcr/images/google-containers/GLOBAL
+coreos镜像仓库：https://quay.io/repository/
 
 临时解决方法：
 	• 在部署kubernetes集群时，需要从google镜像仓库获取kubernetes组件相关镜像，以及从coreos仓库获取flannel网络插件等镜像，但dockerhub或阿里云仓库基本能够搜索到他人上传的包含这2个仓库中的镜像，我们只需要拉取到本地以后改回默认的镜像tag即可。
